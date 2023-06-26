@@ -1,0 +1,362 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #333;
+}
+
+/* Contenido Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar-brand:hover {
+    color: #00C4FF;
+}
+
+#navbarNav {
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00C4FF;
+}
+
+.navbar-toggler {
+    border: none;
+    color: #fff;
+}
+
+/* Estilos del Dropdown */
+.dropdown-item {
+    color: #333;
+}
+
+.dropdown-item:hover {
+    color: #00C4FF;
+}
+
+/* Estilo: Video de fondo */
+#videoContenedor {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /* Proporción de aspecto 16:9 */
+    overflow: hidden;
+}
+
+#videoFondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 80%;
+}
+
+#contenido {
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Estilo: Calculadora */
+#seccion2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)),
+        url(https://cdn.pixabay.com/photo/2013/09/01/17/07/calculator-178127_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.calculadora {
+    max-width: 250px;
+    font-size: 16px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.button {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #777;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 4px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s infinite ease-in-out;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilo: Historial de operaciones + boton eliminar */
+#contenedor-historial {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+#contenedor-historial h2 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#lista-historial {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+}
+
+#lista-historial li {
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#lista-historial li:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+#lista-historial li.success:before {
+    background-color: #5cb85c;
+}
+
+#lista-historial li.error:before {
+    background-color: #d9534f;
+}
+
+#lista-historial li .operation {
+    font-weight: bold;
+}
+
+#lista-historial li .result {
+    float: right;
+}
+
+.clear-history-button {
+    background-color: #F90716;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+
+.clear-history-button:hover {
+    color: #fff;
+    transform: scale(1.1);
+    background: transparent;
+    text-shadow: 1px 1px 6px #F90716;
+    box-shadow: inset 0 0 20px #F90716, 0 0 20px #F90716;
+}
+
+/* Estilo: Salto de linea */
+.logo-seccion {
+    font-size: 16px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 12px 0px 8px 0px;
+}
+
+.logo-seccion h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+h1:hover {
+    color: #00C4FF;
+}
+
+/* Footer */
+.footer {
+    background: #1B1919;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    margin-top: 5px !important;
+}
+
+.footer .span {
+    color: #00C4FF;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.span {
+    cursor: pointer;
+}
+
+.span:hover {
+    color: #fff;
+}
+
+/* Ajustes para pantallas pequeñas (768px) */
+@media only screen and (max-width: 768px) {
+    #contenido {
+        width: 90%;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        margin-right: 0;
+    }
+
+    #seccion2 {
+        padding: 10px;
+    }
+
+    .calculadora {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #contenedor-historial {
+        width: 100%;
+    }
+
+    #lista-historial li {
+        font-size: 14px;
+    }
+
+    .footer p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (600px) */
+@media only screen and (max-width: 600px) {
+
+    #contenido {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .logo-seccion h1 {
+        font-size: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 12px;
+    }
+
+    .calculadora {
+        max-width: 200px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

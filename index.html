@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Link o CDN de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Link del archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Script o CDN de Sweet Alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script o CDN de Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Script o Link de Snow.js -->
+    <script defer src="https://app.embed.im/snow.js"></script>
+    <!-- Link o directorio de imagines de iconos para la pestaña de la pagina -->
+    <link rel="shortcut icon" href="./icons/math-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Seccion: Inicio -->
+    <section id="seccion1">
+
+        <!-- Navbar & DropDown -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">MathMaster</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calculadora">Calculadora</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">En mantenimiento!</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Muy pronto!</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- Video de Fondo -->
+        <div id="videoContenedor">
+            <video id="videoFondo" autoplay loop muted></video>
+            <div id="contenido">
+                <h1>Inicio</h1>
+                <p class="p">
+                    Potencia tus calculos con nuestras calculadoras, operaciones matematicas, conversiones de unidades y
+                    mas. Resultados rapidos y precisos. <br>
+                    ¡Optimiza tus operaciones con nuestra ayuda!
+                </p>
+            </div>
+    </section>
+
+    <!-- Salto de linea en cada seccion -->
+    <div id="calculadora" class="logo-seccion">
+        <h1>Calculadora</h1>
+    </div>
+
+
+    <!-- Seccion: Calculadora principal -->
+    <section id="seccion2">
+        <div class="calculadora mx-auto">
+            <input type="text" id="display" disabled>
+            <div class="buttons">
+                <button class="button" onclick="calculator.limpiarDisplay()">C</button>
+                <button class="button" onclick="calculator.numerosCliqueados(7)">7</button>
+                <button class="button" onclick="calculator.numerosCliqueados(8)">8</button>
+                <button class="button" onclick="calculator.numerosCliqueados(9)">9</button>
+                <button class="button" onclick="calculator.operadoresCliqueados('/')">/</button>
+                <button class="button" onclick="calculator.numerosCliqueados(4)">4</button>
+                <button class="button" onclick="calculator.numerosCliqueados(5)">5</button>
+                <button class="button" onclick="calculator.numerosCliqueados(6)">6</button>
+                <button class="button" onclick="calculator.operadoresCliqueados('*')">*</button>
+                <button class="button" onclick="calculator.numerosCliqueados(1)">1</button>
+                <button class="button" onclick="calculator.numerosCliqueados(2)">2</button>
+                <button class="button" onclick="calculator.numerosCliqueados(3)">3</button>
+                <button class="button" onclick="calculator.operadoresCliqueados('-')">-</button>
+                <button class="button" onclick="calculator.numerosCliqueados(0)">0</button>
+                <button class="button" onclick="calculator.operadoresCliqueados('+')">+</button>
+                <button class="button" onclick="calculator.mostrarResultado()">=</button>
+            </div>
+        </div>
+        <div id="contenedor-historial">
+                <h2>Historial de Operaciones</h2>
+            <ul id="lista-historial"></ul>
+        </div>
+    </section>
+
+    <!-- Pie de pagina -->
+    <div class="footer">
+        <p>
+            Copyright &copy; All Rights Reserved | Designed
+            <span class="span"> By Igmar L. Bolivar </span>
+            | 2023
+        </p>
+    </div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+
+    <!-- Scripts, CDN o CDNJS de librerias externas (JQuery, Popper and Boostrap (versiones anteriores)) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
